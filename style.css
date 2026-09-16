@@ -1,5 +1,23 @@
 body{
-    background:linear-gradient(rgba(253, 203, 76, 0.873),beige);
+    background: linear-gradient(transparent 80%,rgba(255, 166, 0, 0.314)),url(images/photo-1614935981447-893ce3858657.avif);
+    background-size: cover;
+    background-position: 0 40%;
     background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
     
+}
+#jukebox{
+    position: relative;
+    background: linear-gradient(rgba(171, 140, 66, 0.201), rgba(221, 186, 102, 0.295));
+    border: 1px solid rgba(148, 116, 65, 0.611);
+    border-radius: 60px;
+    width: 500px ;
+    height: 350px;
+}
+#controls{
+    border: 1px red solid;
+    position: absolute;
 }
