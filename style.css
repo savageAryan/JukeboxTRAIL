@@ -7,7 +7,7 @@ body{
 }
 #jukebox{
     position: fixed;
-    background: linear-gradient(rgba(171, 140, 66, 0.201), rgba(221, 186, 102, 0.295) 70%);
+    background: linear-gradient(rgba(174, 94, 20, 0.267), rgba(221, 186, 102, 0.295));
     border: 1px solid rgba(148, 116, 65, 0.611);
     border-radius: 60px;
     left: 50%;
@@ -52,7 +52,7 @@ body{
 }
 .songs{
     position: relative;
-    width: 160px;
+    width: 180px;
     height: 30px;
     text-align: left;
     background: linear-gradient(transparent);
@@ -66,17 +66,21 @@ body{
 }
 .songs:hover{
     color: brown;
-    height: 35px;
+    cursor: pointer;
+    transform: scaleX(1.18);
+    transform-origin: right;
+    transition: 0.09s;
+    transform: skew(2);
 }
 #songlist{
-    overflow: scroll;
+    border: red 1px solid;
+    overflow-x: scroll;
     height: 220px;
-
     scrollbar-gutter: hidden;
     position: absolute;
     bottom: 80px ;
     right: 0px;
-    width: 160px;
+    width: 180px;
     outline: none;
     background: linear-gradient(to right, transparent,rgba(157, 86, 10, 0.601));
 }
