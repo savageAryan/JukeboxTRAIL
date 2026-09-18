@@ -68,12 +68,13 @@ body{
 .songs:hover{
     color: brown;
     cursor: pointer;
-    transform: scaleX(1.18);
+    transform: scaleX(1.18) skew(-8deg);
+    border-bottom: rgba(94, 62, 20, 0.714) 3px solid ;
+    background: linear-gradient(to right, transparent, brown);
     transform-origin: right;
     transition: 0.09s;
 }
 #songlist{
-    border: red 1px solid;
     overflow-x: scroll;
     height: 220px;
     scrollbar-gutter: hidden;
@@ -86,4 +87,25 @@ body{
 }
 #songlist::-webkit-scrollbar{
     display: none;
+}
+#imagecon{
+    height: 160px;
+    width: 160px;
+    position: relative;
+    border-bottom: solid 1px brown;
+    border-radius: 40px;
+    left: 40px;
+    top: 40px;
+    padding-bottom: 10px;
+    background: transparent;
+    display: flex;
+    background: linear-gradient(to bottom, transparent 80% , rgba(148, 101, 21, 0.225));
+    justify-content: center;
+}
+#imagecon img:active{
+    animation: recordrot 30s infinite linear;
+}
+@keyframes recordrot {
+    from{transform: rotateZ(0deg);}
+    to{transform: rotateZ(360deg);}
 }
