@@ -52,7 +52,7 @@ body{
 }
 .songs{
     position: relative;
-    width: 180px;
+    width: 160px;
     height: 30px;
     text-align: left;
     background: linear-gradient(transparent);
@@ -63,6 +63,7 @@ body{
     border-bottom: rgba(120, 18, 18, 0.449) 1px solid ;
     outline: none;
     display: block;
+    margin-left: auto;
 }
 .songs:hover{
     color: brown;
@@ -70,7 +71,6 @@ body{
     transform: scaleX(1.18);
     transform-origin: right;
     transition: 0.09s;
-    transform: skew(2);
 }
 #songlist{
     border: red 1px solid;
@@ -80,7 +80,7 @@ body{
     position: absolute;
     bottom: 80px ;
     right: 0px;
-    width: 180px;
+    width: 190px;
     outline: none;
     background: linear-gradient(to right, transparent,rgba(157, 86, 10, 0.601));
 }
