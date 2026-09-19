@@ -102,8 +102,28 @@ body{
     background: linear-gradient(to bottom, transparent 80% , rgba(148, 101, 21, 0.225));
     justify-content: center;
 }
-#imagecon img:active{
+
+.record{
     animation: recordrot 30s infinite linear;
+    animation-play-state: paused;
+}
+.record.playing{
+    animation-play-state: running;
+}
+#songname{
+    border: solid 1px red;
+    position: relative;
+    height: 30px;
+    overflow: hidden;
+    width: 160px;
+    top: 40px;
+    
+    left: 40px;
+}
+#songname p{
+    text-align: center;
+    position: relative;
+    color: red;
 }
 @keyframes recordrot {
     from{transform: rotateZ(0deg);}
