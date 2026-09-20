@@ -64,6 +64,8 @@ body{
     outline: none;
     display: block;
     margin-left: auto;
+    overflow: hidden;
+    white-space: nowrap;
 }
 .songs:hover{
     color: brown;
@@ -73,6 +75,7 @@ body{
     background: linear-gradient(to right, transparent, brown);
     transform-origin: right;
     transition: 0.09s;
+    content: ;
 }
 #songlist{
     overflow-x: scroll;
@@ -111,21 +114,34 @@ body{
     animation-play-state: running;
 }
 #songname{
-    border: solid 1px red;
+    
     position: relative;
-    height: 30px;
+    height: 20px;
     overflow: hidden;
     width: 160px;
     top: 40px;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
     left: 40px;
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 10% , black 90%, transparent);
 }
 #songname p{
     text-align: center;
     position: relative;
-    color: red;
+    color: rgba(144, 75, 11, 0.655);
+    white-space: nowrap;
+}
+#songname p.namescroll{
+    animation: namescroll 8s linear infinite;
 }
 @keyframes recordrot {
     from{transform: rotateZ(0deg);}
     to{transform: rotateZ(360deg);}
+}
+@keyframes namescroll {
+    from{transform: translateX(50%);}
+    to{transform: translateX(-50%);}
+    
 }
