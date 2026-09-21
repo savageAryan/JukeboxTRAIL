@@ -4,10 +4,6 @@ const record = document.querySelector(".record")
 const songname = document.querySelector("#songname p")
 const play = document.querySelector("#play")
 const playicon = play.querySelector("i")
-let songsource = "null"
-songname.textContent = songs.textContent
-console.log(songs);
-console.log(playicon)
 music.addEventListener("play" ,()=> {
     record.classList.add("playing");
     songname.classList.add("namescroll")
@@ -41,7 +37,7 @@ songs.forEach(song => {
 
         });
         song.classList.add("active");
-        songname.textContent = song.dataset.song
+        songname.textContent = song.dataset.song.replace("songs/","");
         music.src = song.dataset.song
         music.play();
     });

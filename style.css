@@ -51,6 +51,44 @@ body{
     scale: 1.9;
     background-color: rgba(174, 94, 20, 0.267);;
 }
+#volumecontrol{
+    border: solid 1px red;
+    width: 40px;
+}
+#volume{
+    position: relative;
+    appearance: none;
+    background: linear-gradient(brown , brown);
+    height: 5px;
+    border-radius: 20px;
+    left: 105px;
+    bottom: 100px;
+    rotate: 90deg;
+}
+#volumebutton{
+    position: relative;
+    color: rgba(132, 68, 13, 0.597);
+    left: 40%;
+    background: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 25px;
+    border: none;
+}
+#volumebutton:hover{
+    background: rgba(251, 212, 152, 0.158);
+}
+#volumebutton:active{
+    transition: 0.3;
+    scale: 0.89;
+    background-color: rgba(174, 94, 20, 0.267);
+}
+
+#volume::-webkit-slider-thumb{
+    color: red;
+    background: red;
+}
 .songs{
     position: relative;
     width: 190px;
@@ -145,6 +183,7 @@ body{
 #songname p.namescroll{
     animation: namescroll 8s linear infinite;
 }
+
 @keyframes recordrot {
     from{transform: rotateZ(0deg);}
     to{transform: rotateZ(360deg);}
