@@ -4,6 +4,10 @@ const record = document.querySelector(".record")
 const songname = document.querySelector("#songname p")
 const play = document.querySelector("#play")
 const playicon = play.querySelector("i")
+const volumeslider = document.getElementById("volume")
+volumeslider.addEventListener("input",()=> {
+    music.volume = volumeslider.value;
+})
 music.addEventListener("play" ,()=> {
     record.classList.add("playing");
     songname.classList.add("namescroll")
