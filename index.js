@@ -46,3 +46,31 @@ songs.forEach(song => {
         music.play();
     });
 });
+const plus = document.getElementById("plus")
+const filebox = document.getElementById("filediv")
+plus.addEventListener("click",()=>{
+    filebox.classList.add("active");
+})
+
+const audiofile = document.getElementById("audiofile")
+const addbutton = document.getElementById("songadd-button")
+const namesong = document.getElementById("namesong")
+
+addbutton.addEventListener("click",()=>{
+    filebox.classList.remove("active")
+    const file = audiofile.files[0]
+    if(! file) return;
+    const url = URL.createObjectURL(file);
+    audiofile.file = null
+    const button = document.createElement("button");
+    button.classList.add("songs");
+    button.textContent = namesong.value;
+    button.addEventListener("click", () => {
+    music.src = url;
+    music.play();
+    });
+
+    document.querySelector("#songlist").appendChild(button);
+    })
+
+

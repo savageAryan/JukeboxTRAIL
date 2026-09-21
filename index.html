@@ -15,12 +15,18 @@
       id="music"
       src=""
     ></audio>
+    <div id="filediv">
+      <input type="file" name="AUDIO FILE" id="audiofile" accept="audio/*">
+      <input type="text" id="namesong" placeholder="Song Name">
+      <button id="songadd-button">ADD SONG</button>
+    </div>
     <div id="jukebox">
       <div id="imagecon" > <img class="record" src="images/record (1).png" alt="default record png"></div>
       <div id="songname"><p>SONG NAME SONG NAME SONG NAME</p></div>
       <div id="volumecontrol"><button id="volumebutton"><i class="fa-solid fa-volume"></i></button>
       <input id="volume" type="range" step="0.01" min="0" max="1" value="1"></div>
       <div id="songlist">
+        <button id="plus"> <i class="fa-solid fa-plus"></i></button>
         <button class="songs" data-song="songs\Bambee - Bumble Bee (Lyrics) __ Spotiverse 0.mp3" data-image="img1.jpg">
           SONG
         </button>
