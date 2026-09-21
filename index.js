@@ -3,22 +3,47 @@ const songs = document.querySelectorAll(".songs")
 const record = document.querySelector(".record")
 const songname = document.querySelector("#songname p")
 const play = document.querySelector("#play")
-const playicon = play.querySelector("i")
+const playicon = document.querySelector("#playicon")
 const volumeslider = document.getElementById("volume")
+const forward = document.getElementById("forward")
+let currentsong = 0;
+const backward = document.getElementById("backward")
+
+backward.addEventListener("click",()=>{
+    if (songs.length === 0) return;
+    currentsong--
+    if (currentsong < 0) {
+        currentsong = songs.length - 1
+    }
+    songs[currentsong].click();
+})
+
+
+forward.addEventListener("click",()=>{
+    if (songs.length === 0) return;
+
+    currentsong++
+    if (currentsong > songs.length) {
+        currentsong = 0
+    }
+
+    songs[currentsong].click();
+})
 volumeslider.addEventListener("input",()=> {
     music.volume = volumeslider.value;
 })
+
 music.addEventListener("play" ,()=> {
     record.classList.add("playing");
     songname.classList.add("namescroll")
-    playicon.classList.remove("fa-play");
-    playicon.classList.add("fa-pause");
+    playicon.classList.remove("fa-play")
+    playicon.classList.add("fa-pause")
 })
 music.addEventListener("pause",()=> {
     record.classList.remove("playing");
     songname.classList.remove("namescroll")
-    playicon.classList.remove("fa-pause");
-    playicon.classList.add("fa-play");
+    playicon.classList.remove("fa-pause")
+    playicon.classList.add("fa-play")
 })
 music.addEventListener("ended",()=> {
     
