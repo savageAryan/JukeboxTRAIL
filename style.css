@@ -51,6 +51,16 @@ body{
     scale: 1.9;
     background-color: rgba(174, 94, 20, 0.267);;
 }
+#play .fa-pause {
+    display: none;
+}
+#play.playing .fa-play {
+    display: none;
+}
+
+#play.playing .fa-pause {
+    display: inline-block;
+}
 #volumecontrol{
     position: relative;
     width: 60px;

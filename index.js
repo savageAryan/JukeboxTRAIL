@@ -35,15 +35,17 @@ volumeslider.addEventListener("input",()=> {
 
 music.addEventListener("play" ,()=> {
     record.classList.add("playing");
-    songname.classList.add("namescroll")
-    playicon.classList.remove("fa-play")
-    playicon.classList.add("fa-pause")
+    console.log("papad")
+    songname.classList.add("namescroll");
+
+    play.classList.add("playing")
 })
 music.addEventListener("pause",()=> {
     record.classList.remove("playing");
-    songname.classList.remove("namescroll")
-    playicon.classList.remove("fa-pause")
-    playicon.classList.add("fa-play")
+    songname.classList.remove("namescroll");
+    console.log("jhandu")
+
+    play.classList.remove("playing")
 })
 music.addEventListener("ended",()=> {
     
