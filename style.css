@@ -70,6 +70,16 @@ body{
     display: flex;
     justify-content: center;
 }
+#volumebutton .fa-volume-xmark{
+    display: none;
+}
+#volumebutton.mute .fa-volume{
+    display: none;
+}
+#volumebutton.mute .fa-volume-xmark{
+    display: inline-block;
+    color: rgba(229, 38, 4, 0.753);
+}
 #volume{
     position: relative;
     appearance: none;

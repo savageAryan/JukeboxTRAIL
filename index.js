@@ -9,8 +9,7 @@ const forward = document.getElementById("forward")
 let currentsong = 0;
 const backward = document.getElementById("backward")
 music.addEventListener("ended",()=>{
-    currentsong++
-    music.play()
+    forward.click()
 })
 backward.addEventListener("click",()=>{
     const songs = Array.from(document.querySelectorAll(".songs"));
@@ -73,7 +72,7 @@ function songselect(song) {
         s.classList.remove("active")
     })
     song.classList.add("active")
-    songname.textContent = song.dataset.name || song.dataset.song.replace("songs/", "");
+    songname.textContent = song.dataset.name || song.dataset.song.replace("songs", "");
     music.src = song.dataset.song;
     music.play();
 }
@@ -113,5 +112,25 @@ addbutton.addEventListener("click",()=>{
 
     document.querySelector("#songlist").appendChild(button);
     })
+const volumebutton = document.getElementById("volumebutton")
+let mute = false
 
+volumebutton.addEventListener("click",()=>{
+    if(!mute){
+        volumebutton.classList.add("mute")
+        mute = true
+        unmutevol = volumeslider.volume
+        volumeslider.value = 0
+        music.volume = volumeslider.value
+    }
+    else{
+        console.log("lol")
+        volumebutton.classList.remove("mute")
+        mute = false
+        volumeslider.value = 0.4
+        music.volume = volumeslider.value
+    }
+    
+    
+})
 
